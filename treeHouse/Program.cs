@@ -24,9 +24,22 @@ namespace Treehouse.fitness{
                 {
 					// Add minutes to exercise tool
 					int minutes = int.Parse(entry);
+
                     if(minutes <= 10)
                     {
                        Console.WriteLine("better than nothing"); 
+                    }
+                    else if(minutes <= 30)
+                    {
+                       Console.WriteLine("NIOCE!");
+                    }
+                    else if(minutes <= 60)
+                    {
+                       Console.WriteLine("Wow good job!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Okay take a break");  
                     }
 
 					runningTotal = runningTotal + minutes;
