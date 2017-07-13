@@ -7,25 +7,24 @@ namespace Treehouse.fitness{
 		static void Main()
 		{
             
-            int runningTotal = 0;
+            var runningTotal = 0.0;
 
-            bool keepGoing = true;
-            while(keepGoing)
+           
+            while(true)
             {
 				// Prompt the user for minutes exercised
 				Console.Write("Enter how many minutes you exercised or type \"quit\" to exit: ");
-				string entry = Console.ReadLine();
+				var entry = Console.ReadLine();
 
-                if (entry == "quit")
+                if (entry.ToLower() == "quit")
                 {
-                    keepGoing = false;
+                    break;
                 }
-                else
-                {
+
                     try
                     {
                         // Add minutes to exercise tool
-                        int minutes = int.Parse(entry);
+                        var minutes = double.Parse(entry);
 
 						if (minutes <= 0)
 						{
@@ -48,7 +47,7 @@ namespace Treehouse.fitness{
 							Console.WriteLine("Okay take a break");
 						}
 
-						runningTotal = runningTotal + minutes;
+						runningTotal += minutes;
 
 						
 					}
@@ -62,7 +61,6 @@ namespace Treehouse.fitness{
 					Console.WriteLine("You've entered " + entry + " minutes");
 
 					
-				}
 				// Repeat until user quits 
 			}
             Console.WriteLine("Goodbye");
