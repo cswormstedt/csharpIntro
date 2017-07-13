@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 
 namespace Treehouse.fitness{
     
@@ -22,34 +22,48 @@ namespace Treehouse.fitness{
                 }
                 else
                 {
-					// Add minutes to exercise tool
-					int minutes = int.Parse(entry);
+                    try
+                    {
+                        // Add minutes to exercise tool
+                        int minutes = int.Parse(entry);
 
-                    if(minutes <= 10)
-                    {
-                       Console.WriteLine("better than nothing"); 
-                    }
-                    else if(minutes <= 30)
-                    {
-                       Console.WriteLine("NIOCE!");
-                    }
-                    else if(minutes <= 60)
-                    {
-                       Console.WriteLine("Wow good job!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Okay take a break");  
-                    }
+						if (minutes <= 0)
+						{
+							Console.WriteLine(minutes + " is not an accecptable input");
+						}
+						else if (minutes <= 10)
+						{
+							Console.WriteLine("better than nothing");
+						}
+						else if (minutes <= 30)
+						{
+							Console.WriteLine("NIOCE!");
+						}
+						else if (minutes <= 60)
+						{
+							Console.WriteLine("Wow good job!");
+						}
+						else
+						{
+							Console.WriteLine("Okay take a break");
+						}
 
-					runningTotal = runningTotal + minutes;
+						runningTotal = runningTotal + minutes;
+
+						
+					}
+                    catch(FormatException)
+                    {
+                        Console.WriteLine("That is not a valid input.");
+                        continue;
+                    }
 
 					//Display total minutes exerciesd to the screen
 					Console.WriteLine("You've entered " + entry + " minutes");
 
-					// Repeat until user quits 
+					
 				}
-                	
+				// Repeat until user quits 
 			}
             Console.WriteLine("Goodbye");
 		}
