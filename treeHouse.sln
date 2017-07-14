@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "treeHouse", "treeHouse\treeHouse.csproj", "{E2B2E878-D47A-4146-9DCC-D86607F1F3A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{505C7F5B-1E27-43EA-BE90-BF4A9EA00E4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{E2B2E878-D47A-4146-9DCC-D86607F1F3A3}.Debug|x86.Build.0 = Debug|x86
 		{E2B2E878-D47A-4146-9DCC-D86607F1F3A3}.Release|x86.ActiveCfg = Release|x86
 		{E2B2E878-D47A-4146-9DCC-D86607F1F3A3}.Release|x86.Build.0 = Release|x86
+		{505C7F5B-1E27-43EA-BE90-BF4A9EA00E4A}.Debug|x86.ActiveCfg = Debug|x86
+		{505C7F5B-1E27-43EA-BE90-BF4A9EA00E4A}.Debug|x86.Build.0 = Debug|x86
+		{505C7F5B-1E27-43EA-BE90-BF4A9EA00E4A}.Release|x86.ActiveCfg = Release|x86
+		{505C7F5B-1E27-43EA-BE90-BF4A9EA00E4A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
