@@ -11,5 +11,12 @@ namespace Game
             Width = width;
             Height = height;
         }
+
+        public bool OnMap(Point point)
+        {
+            bool inBound = point.X >= 0 && point.X < Width && point.Y >= 0 && point.Y < Height;
+
+            return inBound;
+        }
     }
 }
